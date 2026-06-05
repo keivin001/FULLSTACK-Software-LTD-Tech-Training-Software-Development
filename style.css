@@ -91,6 +91,253 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(13,110,253,0.3);
     }
+    .course-modal {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(15,23,42,0.7);
+      padding: 1.5rem;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .course-modal.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .course-modal:not(.hidden) {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .course-modal-dialog {
+      width: min(520px, 100%);
+      background: var(--white);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .course-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border: none;
+      background: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #212529;
+    }
+    .course-modal-title {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    .course-modal-description {
+      color: #495057;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .course-modal-list {
+      list-style: none;
+      margin: 0 0 1.5rem;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .course-modal-list li {
+      color: #343a40;
+    }
+    .course-modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+    .course-modal-actions .btn {
+      min-height: 46px;
+      padding: 0.75rem 1.2rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .course-modal-enroll-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .blog-modal {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(15, 23, 42, 0.75);
+      padding: 1.5rem;
+      z-index: 2100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .blog-modal:not(.hidden) {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .blog-modal-dialog {
+      width: min(560px, 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+      border-radius: 28px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 32px 90px rgba(0,0,0,0.18);
+      position: relative;
+    }
+    .blog-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(13, 110, 253, 0.2);
+      background: rgba(255, 255, 255, 0.96);
+      font-size: 1rem;
+      cursor: pointer;
+      color: #495057;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(13, 110, 253, 0.08);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .blog-modal-close:hover {
+      transform: translateY(-1px);
+      background: #0d6efd;
+      color: white;
+    }
+    .blog-modal-icon {
+      width: 48px;
+      height: 48px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #0d6efd;
+      color: white;
+      font-size: 1.25rem;
+    }
+    .blog-modal-header h3 {
+      margin-bottom: 0.25rem;
+      font-size: clamp(1.6rem, 2vw, 1.9rem);
+    }
+    .blog-modal-content {
+      color: #4b5563;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .course-modal-close-btn {
+      width: 46px;
+      min-width: 46px;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    .course-modal-whatsapp {
+      background: #25d366;
+      border-color: #1ebe59;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .course-modal-whatsapp:hover {
+      background: #1cb759;
+      border-color: #17a64d;
+      color: white;
+    }
+    .course-modal-list li {
+      color: #343a40;
+      background: #f8f9fa;
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(13,110,253,0.08);
+    }
+    .course-modal-list li strong {
+      display: inline-block;
+      min-width: 90px;
+      color: #0d6efd;
+    }
+    .course-modal-dialog {
+      width: min(580px, 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+      border-radius: 28px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 32px 90px rgba(0,0,0,0.18);
+      position: relative;
+    }
+    .course-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .course-modal-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background: rgba(13,110,253,0.1);
+      display: grid;
+      place-items: center;
+      color: #0d6efd;
+      font-size: 1.35rem;
+      box-shadow: inset 0 0 0 1px rgba(13,110,253,0.12);
+    }
+    .course-modal-title {
+      margin-bottom: 0;
+      font-size: clamp(1.7rem, 2vw, 2rem);
+      letter-spacing: -0.03em;
+    }
+    .course-modal-description {
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+    .course-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(13,110,253,0.2);
+      background: rgba(255,255,255,0.96);
+      font-size: 1rem;
+      cursor: pointer;
+      color: #495057;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(13,110,253,0.08);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .course-modal-close:hover {
+      transform: translateY(-1px);
+      background: #0d6efd;
+      color: white;
+    }
+    .btn-outline-secondary {
+      border-color: #6c757d;
+      color: #6c757d;
+    }
+    .btn-outline-secondary:hover {
+      background: #6c757d;
+      color: white;
+    }
     .btn-outline-custom {
       border: 2px solid var(--primary);
       color: var(--primary);
@@ -253,19 +500,19 @@
       padding: 12px 20px;
       font-weight: bold;
       z-index: 1000;
-      box-shadow: 0 10px 18px rgba(37,211,102,0.25), 0 0 0 0 rgba(37,211,102,0.15);
+      /* box-shadow: 0 10px 25px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.2); */
       text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-      animation: whatsappPulse 3s ease-in-out infinite;
+      animation: whatsappPulse 2.5s ease-in-out infinite;
     }
     .whatsapp-float:hover {
       background-color: #1dc757;
       transform: translateY(-2px);
-      box-shadow: 0 18px 32px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.08);
+      box-shadow: 0 18px 32px rgba(37,211,102,0.45), 0 0 0 18px rgba(37,211,102,0.12);
     }
     .whatsapp-float .whatsapp-text {
       display: inline-block;
@@ -279,13 +526,14 @@
       line-height: 1;
     }
     @keyframes whatsappPulse {
-      0%, 100% {
-        transform: translateY(0);
-        box-shadow: 0 10px 18px rgba(37,211,102,0.25), 0 0 0 0 rgba(37,211,102,0.15);
+      0% {
+        box-shadow: 0 10px 25px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.2);
       }
-      50% {
-        transform: translateY(-2px);
-        box-shadow: 0 16px 28px rgba(37,211,102,0.35), 0 0 30px rgba(37,211,102,0.15);
+      70% {
+        box-shadow: 0 10px 25px rgba(37,211,102,0.35), 0 0 0 18px rgba(37,211,102,0);
+      }
+      100% {
+        box-shadow: 0 10px 25px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0);
       }
     }
     @media (max-width: 1200px) {
@@ -521,8 +769,37 @@
       background-color: rgba(255,255,255,0.95) !important;
       backdrop-filter: blur(5px);
     }
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      padding: 0.35rem 0.5rem;
+      color: var(--primary);
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    .navbar-menu-icon {
+      font-size: 1.2rem;
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-toggler-icon {
+      background-image: none;
+    }
+    .navbar-collapse {
+      background: rgba(255,255,255,0.98);
+    }
     .dark-mode .navbar {
       background-color: rgba(30,30,30,0.95) !important;
+    }
+    .dark-mode .navbar-collapse {
+      background: rgba(30,30,30,0.95);
     }
     @media (max-width: 768px) {
       .section-padding { padding: 50px 0; }
@@ -715,3 +992,99 @@
         bottom: 12px;
       }
     }
+
+/* Global responsive cleanup and width/padding fixes */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img, svg, iframe, video, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section,
+.section-padding,
+.hero-content,
+.container,
+.container-fluid,
+footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-content,
+.container,
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-padding {
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+
+.hero-section {
+  overflow: hidden;
+}
+
+.course-modal-dialog,
+.blog-modal-dialog {
+  width: clamp(320px, 90vw, 560px);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.course-modal-dialog {
+  padding: 1.8rem 1.8rem;
+}
+
+.blog-modal-dialog {
+  padding: 1.8rem 1.8rem;
+}
+
+.course-modal-actions {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-modal-actions .btn {
+  width: auto;
+}
+
+.hero-section .display-4 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.hero-section .lead {
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .container,
+  .container-fluid {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .course-modal-actions {
+    gap: 0.75rem;
+  }
+  .container,
+  .container-fluid {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
